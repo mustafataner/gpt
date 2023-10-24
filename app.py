@@ -17,13 +17,15 @@ st.balloons()
 prompt = st.text_input('Bana istediğin soruyu sorabilirsin :) ')
 
 # LLM nesnesini başlat
-llm = OpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
+llm = ChatOpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
 
 if st.button('Sor'):
     if prompt:
         # Mesaj formatını doğru bir şekilde ayarla
         response = llm([{"role": "user", "content": prompt}])
         st.write(response['choices'][0]['message']['content'])
+        st.write(response["content"])
+
     else:
         st.write("Lütfen bir soru girin.")
 
