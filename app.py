@@ -2,6 +2,7 @@ import os
 from apikey import apikey
 import streamlit as st
 from langchain.llms import OpenAI
+from langchain.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 from langchain.memory import ConversationBufferMemory
@@ -18,7 +19,7 @@ prompt=st.text_input('Bana istediğin soruyu sorabilirsin :) ')
 
 if st.button('Sor'):
     if prompt:
-        llm = OpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
+        llm = ChatOpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
         response = llm(prompt)
         st.write(response)
     else:
