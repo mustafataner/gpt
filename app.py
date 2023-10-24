@@ -17,7 +17,7 @@ st.balloons()
 prompt = st.text_input('Bana istediğin soruyu sorabilirsin :) ')
 
 # LLM nesnesini başlat
-llm = ChatOpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
+llm = OpenAI(temperature=0.92, model_name='gpt-3.5-turbo')
 
 if st.button('Sor'):
     if prompt:
