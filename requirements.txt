@@ -1,7 +1,7 @@
 openai==0.27.8
 requests==2.31.0
 
-langchain==0.0.281
+langchain==0.0.321
 apikey==0.2.4
 
 streamlit==1.24.0
