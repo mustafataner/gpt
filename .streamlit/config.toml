@@ -1,20 +1,45 @@
+
 [browser]
 gatherUsageStats = false
+serverAddress = "0.0.0.0"
+serverPort = 8501
+showWarningOnDirectExecution = true
+
+[global]
+developmentMode = false
+showWarningOnDirectExecution = true
 
 [server]
 headless = true
 enableCORS = false
 enableXsrfProtection = true
+liveSave = false
 
 [theme]
-primaryColor = "#E694FF"
-backgroundColor = "#00172B"
-secondaryBackgroundColor = "#0083B8"
-textColor = "#DCDCDC"
-font = "sans-serif"
+base = "light"
+
+[s3]
+bucket = ""
+
+[viewer]
+maxRetries = 5
+useLatencyBuffer = true
+
+[mapbox]
+token = ""
+style = "mapbox://styles/mapbox/streets-v11"
 
 [deprecation]
 showfileUploaderEncoding = false
+showPyplotGlobalUse = false
 
-[global]
-developmentMode = false
+[logger]
+level = "info"
+
+[client]
+displayEnabled = true
+
+
+[browser]
+hideFooter = true
+
