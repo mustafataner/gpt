@@ -9,7 +9,7 @@ from langchain.utilities import WikipediaAPIWrapper
 
 
 
-#os.environ['OPENAI_API_KEY']=apikey
+#os.environ['OPENAI_API_KEY']=apikey   
 apikey = os.environ.get("OPENAI_API_KEY")
 st.title("Kaçak Zeka'ya Hoş Geldiniz!")
 st.caption('bu proje :blue[mustafa taner]  tarafından yazılmıştır   :sunglasses:')
